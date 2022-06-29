@@ -21,8 +21,8 @@ type adapter struct {
 func (*adapter) CalculateResponse(context domain.IContextChainLink) *domain.OutputServicesDTO {
 	return &domain.OutputServicesDTO{
 		ResponseServices: fmt.Sprintf(
-			"IN: %v\nR1: %s\nR2: %s\nR3: %s",
-			context.GetInputService(),
+			"IN: [type:%s]\nR1: %s\nR2: %s\nR3: %s",
+			context.GetInputService().GrandType,
 			context.GetResponseService1(),
 			context.GetResponseService2(),
 			context.GetResponseService3(),
