@@ -46,12 +46,12 @@ func CreateRefreshTokenStrategy(adapter adapter.IAdapter) IStrategy {
 	}
 	s.firstChainLink = &chainlink.ListChainLink{
 		ExecutesMethods: []chainlink.Execute{
+			services.SearchService1,
 			services.SearchService2,
-			services.SearchService3,
 		},
 	}
 	s.firstChainLink.SetNext(&chainlink.SimpleChainLink{
-		ExecuteMethod: services.SearchService1,
+		ExecuteMethod: services.SearchService3,
 	})
 	return s
 }
