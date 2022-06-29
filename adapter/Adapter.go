@@ -11,13 +11,14 @@ type IAdapter interface {
 
 // CreateAdapter Factory method
 func CreateAdapter(input *domain.InputServicesDTO) IAdapter {
-	return &Adapter{}
+	return &adapter{}
 }
 
-type Adapter struct {
+// Se crea privado para que la creación sea solo a través del factory method
+type adapter struct {
 }
 
-func (*Adapter) CalculateResponse(context domain.IContextChainLink) *domain.OutputServicesDTO {
+func (*adapter) CalculateResponse(context domain.IContextChainLink) *domain.OutputServicesDTO {
 	return &domain.OutputServicesDTO{
 		ResponseServices: fmt.Sprintf(
 			"IN: %v\nR1: %s\nR2: %s\nR3: %s",

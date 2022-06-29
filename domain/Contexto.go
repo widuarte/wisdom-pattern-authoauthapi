@@ -11,36 +11,36 @@ type IContextChainLink interface {
 }
 
 type ContextChainLink struct {
-	inputService      *InputServicesDTO
-	responseServices1 string
-	responseServices2 string
-	responseServices3 string
+	InputService      *InputServicesDTO
+	ResponseServices1 string
+	ResponseServices2 string
+	ResponseServices3 string
 }
 
 func (i *ContextChainLink) GetInputService() *InputServicesDTO {
-	return i.inputService
+	return i.InputService
 }
 
 func (i *ContextChainLink) SetResponseService1(response string) {
-	i.responseServices1 = response
+	i.ResponseServices1 = response
 }
 
 func (i *ContextChainLink) GetResponseService1() string {
-	return i.responseServices1
+	return i.ResponseServices1
 }
 
 func (i *ContextChainLink) SetResponseService2(response string) {
-	i.responseServices2 = response
+	i.ResponseServices2 = response
 }
 
 func (i *ContextChainLink) GetResponseService2() string {
-	return i.responseServices2
+	return i.ResponseServices2
 }
 
 func (i *ContextChainLink) SetResponseService3(response string) {
-	i.responseServices3 = response
+	i.ResponseServices3 = response
 }
 
 func (i *ContextChainLink) GetResponseService3() string {
-	return i.responseServices3
+	return i.ResponseServices3
 }
